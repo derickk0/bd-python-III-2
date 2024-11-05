@@ -14,7 +14,7 @@ class UserService:
             cadastrado = self.repository.pesquisar_usuario_email(usuario.email)
 
             if cadastrado:
-                print("Usuário já cadastrado!")
+                print("Usuário já foi cadastrado.")
                 return
 
             self.repository.salvar_usuario(usuario)
@@ -23,6 +23,8 @@ class UserService:
             print(f"Erro ao salvar o usuário: {erro}")
         except Exception as erro:
             print(f"Erro inesperado: {erro}")
+
+    def deletar_usuario()
 
     def listar_usuarios(self):
         return self.repository.listar_usuario()

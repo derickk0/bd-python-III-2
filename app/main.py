@@ -9,10 +9,20 @@ def main():
     repository = UserRepository(session)
     service = UserService(repository)
 
+    print("=== SENAI SOLUTION ==="
+        "\n1 - Adicionar usuário"
+        "\n2 - Pesquisar usuário"
+        "\n3 - Atualizar dados de um usuário"
+        "\n4 - Excluir usuário"
+        "\n5 - Exibir todos os usuários cadastrados"
+        "\n0 - Sair")
+        
+    opcao = input("Digite o número correspondente a opção desejada: ")
+
     print("\nAdicionando usuário.")
-    nome = input("Digite seu nome: ")
-    email = input("Digite seu e-mail: ")
-    senha = input("Digite sua senha: ")
+    nome = input("Digite o nome do usuário: ")
+    email = input("Digite o e-mail do usuário: ")
+    senha = input("Digite a senha do usuário: ")
 
     service.criar_usuario(nome=nome, email=email, senha=senha)
 
